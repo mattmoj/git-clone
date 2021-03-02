@@ -9,45 +9,6 @@ import static org.junit.Assert.*;
  */
 public class TestBuggyAList {
     // YOUR TESTS HERE
-    /*
-    AListNoResizing<Integer> L = new AListNoResizing<>();
-    BuggyAList<Integer> bug = new BuggyAList<>();
-    int n = 500;
-    for(int i=0; i<=n; i++){
-        int operationNumber = StdRandom.uniform(0, 4);
-        if(operationNumber == 0){
-            //addLast
-            int randVal = StdRandom.uniform(0, 100);
-            L.addLast(randVal);
-            System.out.println("addLast(" + randVal + ")");
-        }
-        else if (operationNumber == 1) {
-            //size
-            int size_b = L.size();
-            int size_g = bug.size();
-            assertEquals("Size buggy not equal", size_g, size_b);
-            System.out.println("size: " + size_g);
-        }
-        else if(operationNumber == 2){
-            if(L.size() > 0){
-                int last_g = L.getLast();
-                int last_b = bug.getLast();
-                assertEquals("getLast for buggy incorrect", last_g, last_b);
-                System.out.println("getLast" + last_g);
-            }
-        }
-        else if(operationNumber == 3){
-            //removeLast
-            if(L.size()>0){
-                int rlast_g = L.removeLast();
-                int rlast_b = bug.removeLast();
-                assertEquals("removeLast for buggy incorrect", rlast_g, rlast_b);
-                System.out.println("removeLast:" + rlast_g);
-            }
-        }
-    }
-
-     */
     @Test
     public void testThreeAddThreeRemove() {
       AListNoResizing<Integer> correct = new AListNoResizing<>();
@@ -79,12 +40,15 @@ public class TestBuggyAList {
           // addLast
           int randVal = StdRandom.uniform(0, 100);
           L.addLast(randVal);
+          bug.addLast(randVal);
           System.out.println("addLast(" + randVal + ")");
         }
         else if (operationNumber == 1) {
           // size
-          int size = L.size();
-          System.out.println("size: " + size);
+          int size_g = L.size();
+          int size_b = bug.size();
+          assertEquals("Size buggy not equal", size_g, size_b);
+          System.out.println("size: " + L.size());
         }
         else if(operationNumber == 2){
           if(L.size() > 0){
