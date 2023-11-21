@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <div>
+        <header>
+            <div id="header-left-side">
+                <img id="menu-button" src="assets/menu_icon.png">
+                <div id="quick-find-container">
+                    <img id="search-icon" src="assets/search_icon.png">
+                    <input id="quick-find" type="text" placeholder="Quick Find"/>
+                </div>
+            </div>
+            <div id="header-right-side">
+                <img id="check-icon" src="assets/check_icon.png">
+                <p id="task-count">30/5</p>
+            </div>
+        </header>
+
+        <nav id="side-nav">
+            <ul>
+                <li>
+                    <img src="assets/inbox_icon.png">
+                    <span class="text">Inbox <span class="count">5</span></span>
+                </li>
+                <li>
+                    <img src="assets/calendar_icon.png">
+                    <span class="text">Today <span class="count">5</span></span>
+                </li>
+                <li>
+                    <img src="assets/upcoming_icon.png">
+                    <span class="text">Upcoming</span>
+                </li>
+            </ul>
+        </nav>
+
+        <main id="main-nav">
+            <h1>Inbox</h1>
+            <ul id="task-list" class="tasks">
+            <!-- <ul>
+                <li>
+                    <input type="checkbox" />Call Mom
+                </li>
+                <hr />
+                <li>
+                    <input type="checkbox" />Buy the new issue of Scientific America
+                </li>
+                 -->
+            </ul>
+            <div id="add-task">
+                <img id="plus-sign" src="assets/add_task_icon.png">
+                <p>Add task</p>
+            </div>
+            <br>
+            <div id="add-input">
+                <div id="add-text-input">
+                    <input id="task-text" type="text" placeholder="Task name"/>
+                </div>
+                <hr width="100%">
+                <div id="cancel-task-buttons">
+                    <button id="cancel-btn">Cancel</button>
+                    <button id="add-btn">Add task</button>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
